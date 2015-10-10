@@ -41,18 +41,18 @@
     "wrench": "~1.5.8",
     "http-proxy-middleware": "~0.8.0",
     "browser-sync": "~2.9.2",
-    "browser-sync-spa": "~1.0.2"
-  },
-  "scripts": {
-    "test": "gulp test",
-    "postinstall": "bower install --config.interactive=false && gulp build"
-  },
-  "devDependencies": {
+    "browser-sync-spa": "~1.0.2",
     "karma": "~0.13.9",
     "karma-jasmine": "~0.3.6",
     "karma-phantomjs-launcher": "~0.2.1",
     "karma-angular-filesort": "~1.0.0",
     "karma-coverage": "~0.5.2",
     "karma-ng-html2js-preprocessor": "~0.1.2"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "postinstall": "bower install --config.interactive=false && gulp build"
+  },
+  "devDependencies": {
   }
 }
