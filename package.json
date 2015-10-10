@@ -56,7 +56,7 @@
     "e2e-test" : "npm run preprotractor",
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor test/protractor-conf.js",
-    "start": "node server.js"
+    "start": "http-server -p 8080"
     
   },
   "devDependencies": {
