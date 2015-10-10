@@ -13,5 +13,6 @@ app.get('*', function(req, res) {
 
 // START THE SERVER
 // ====================================
-app.listen(process.env.PORT);
-console.log('Magic happens on port ' + process.env.PORT);
+var port = process.env.PORT || 8080;
+app.listen(port);
+console.log('Magic happens on port ' + port);
