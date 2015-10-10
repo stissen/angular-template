@@ -15,7 +15,7 @@
       },
       controller: NavbarController,
       controllerAs: 'vm',
-      bindToController: true,
+      bindToController: true
     };
 
     return directive;
