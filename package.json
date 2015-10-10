@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "Template for further projects",
   "repository": "https://github.com/alphatools/angular-template",
-   "license": "MIT",
+  "license": "MIT",
   "dependencies": {
     "bower": "^1.5.3",
     "chalk": "~1.1.1",
@@ -52,13 +52,13 @@
   "scripts": {
     "postinstall": "bower install --config.interactive=false && gulp build",
     "lint-test": "gulp lint",
-    "unit-test" : "gulp test",
-    "e2e-test" : "npm run preprotractor",
+    "unit-test": "gulp test",
+    "e2e-test": "npm run preprotractor",
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor test/protractor-conf.js",
     "start": "http-server -p 8080"
-    
   },
   "devDependencies": {
+    "protractor": "^2.5.1"
   }
 }
