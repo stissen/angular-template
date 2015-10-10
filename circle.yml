@@ -12,6 +12,8 @@ test:
   override:
     - npm run lint-test
     - npm run unit-test
+    - cd sc-*-linux && ./bin/sc -u sergejtissen -k 701bd242-5621-448c-b146-5305c9e96a5d:
+        background: true
     - npm start:
         background: true
     - sleep 5
