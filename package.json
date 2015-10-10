@@ -2,12 +2,7 @@
   "name": "workspace",
   "version": "0.0.0",
   "dependencies": {
-    "express": "^4.13.3"
-  },
-  "scripts": {
-    "test": "gulp test"
-  },
-  "devDependencies": {
+    "express": "^4.13.3",
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "~3.0.1",
     "gulp-angular-templatecache": "~1.7.0",
@@ -48,6 +43,13 @@
     "chalk": "~1.1.1",
     "uglify-save-license": "~0.4.1",
     "wrench": "~1.5.8"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "postinstall": "bower install --config.interactive=false && gulp build",
+    
+  },
+  "devDependencies": {
   },
   "engines": {
     "node": ">=0.10.0"
