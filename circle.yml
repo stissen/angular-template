@@ -3,6 +3,15 @@ deployment:
     branch: master
     heroku:
       appname: alpha-frontend-template
+test:
+  pre:
+    - npm start:
+        background: true
+    - sleep 5
+  override:
+    - npm run lint-test
+    - npm run unit-test
+    - npm run e2e-test
   
 
       

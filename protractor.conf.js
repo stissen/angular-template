@@ -10,15 +10,15 @@ exports.config = {
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    'browserName': 'PhantomJS'
+    'browserName': 'chrome'
   },
-  
-  baseUrl: 'http://localhost:3000',
+  chromeOnly: true,
+  baseUrl: 'http://localhost:8080/',
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
   specs: [paths.e2e + '/**/*.js'],
-
+  framework: 'jasmine',
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
     showColors: true,
