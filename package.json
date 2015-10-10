@@ -49,8 +49,5 @@
     "postinstall": "bower install --config.interactive=false && gulp build"
   },
   "devDependencies": {
-  },
-  "engines": {
-    "node": ">=0.10.0"
   }
 }

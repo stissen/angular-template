@@ -1,4 +1,8 @@
-
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: alpha-frontend-template
   
 
       
