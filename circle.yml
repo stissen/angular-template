@@ -1,16 +1,20 @@
+dependencies:
+  post:
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
+
 deployment:
   prod:
     branch: master
     heroku:
       appname: alpha-frontend-template
 test:
-  pre:
-    - npm start:
-        background: true
-    - sleep 5
   override:
     - npm run lint-test
     - npm run unit-test
+    - npm start:
+        background: true
+    - sleep 5
     - npm run e2e-test
   
 
