@@ -12,8 +12,10 @@ test:
   override:
     - npm run lint-test
     - npm run unit-test
-    - cd sc-*-linux && ./bin/sc -u sergejtissen -k 701bd242-5621-448c-b146-5305c9e96a5d:
+    - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
         background: true
+    # Wait for tunnel to be ready
+    - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
     - npm start:
         background: true
     - sleep 5
