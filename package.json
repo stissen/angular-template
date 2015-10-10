@@ -54,6 +54,7 @@
     "lint-test": "gulp lint",
     "unit-test": "gulp test",
     "e2e-test": "npm run protractor",
+    "preprotractor": "webdriver-manager update",
     "protractor": "protractor protractor-conf.js",
     "start": "node server.js"
   },
