@@ -12,7 +12,7 @@ test:
   override:
     - npm run lint-test
     - npm run unit-test
-    - cd sc-*-linux && ./bin/sc --user sergejtissen --api-key 701bd242-5621-448c-b146-5305c9e96a5d --readyfile ~/sauce_is_ready:
+    - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
         background: true
     # Wait for tunnel to be ready
     - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
@@ -20,6 +20,8 @@ test:
         background: true
     - sleep 5
     - npm run e2e-test
+  post:
+    - killall --wait sc  # wait for Sauce Connect to close the tunnel
   
 
       
