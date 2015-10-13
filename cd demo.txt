@@ -1,3 +1,13 @@
+Cicrle:
+- change main.html
+- standalone chrome app
+
+Test
+
+test:
+  override:
+    - npm run lint-test
+    - npm run unit-test
 
 
 dependencies:

@@ -1,4 +1,7 @@
-
+test:
+  override:
+    - npm run lint-test
+    - npm run unit-test
   
 
       
