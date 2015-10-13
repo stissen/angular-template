@@ -21,3 +21,9 @@ test:
 general:
   artifacts:
     - "dist"
+    
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: mean-cd-example
