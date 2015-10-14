@@ -1,0 +1,19 @@
+dependencies:
+  post:
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
+
+test:
+  override:
+    - npm run lint-test
+    - npm run unit-test
+    - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
+        background: true
+    # Wait for tunnel to be ready
+    - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
+    - npm start:
+        background: true
+    - sleep 5
+    - npm run e2e-test
+  post:
+    - killall --wait sc  # wait for Sauce Connect to close the tunnel
