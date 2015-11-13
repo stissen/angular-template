@@ -6,3 +6,9 @@ test:
         background: true
     - sleep 5
     - npm run e2e-test
+    
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: mean-cd-example
